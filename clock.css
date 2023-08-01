@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    color: #fff;
+}
+
+body{
+    background-image:url( https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+h1{
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+header{
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.5rem 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+.Logo img{
+    width: 100px;
+    height: auto;
+}
+ul.navlist{
+    list-style:none;
+    display: flex;
+    align-items: center;
+}
+
+ul.navlist li{
+    margin-left: 1.5rem;
+    position: relative
+}
+ul.navlist li:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+ul.navlist li:hover:after{
+    transform: scaleX(1);
+  transform-origin: bottom left;
+
+}
+#openbutton{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    background: transparent;
+    color:#fff;
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    border-radius: .5rem;
+    font-weight: 600;
+    cursor: grab;
+    z-index: 1;
+    overflow: hidden;
+}
+#openbutton:hover{
+    background-color:white;
+    color: black;
+    transition: all .7s;
+}
+.clock{
+    display: flex;
+}
+.clock div{
+    margin: 5px;
+}
+.clock span{
+    border: #fff;
+    border-radius: 5px 5px 0 0;
+    width: 120px;
+    height: 100px;
+    opacity: .8;
+    text-shadow: rgb(1, 11, 12);
+    display: flex;
+    background-color: slateblue;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.clock .text{
+    font-size: 10px;
+    border-radius: 0px 0px 5px 5px;
+    height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color:rgb(58, 58, 193)
+}
+.clock #ampm{
+    position: relative;
+    top:95px;
+    width: 60px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+}
